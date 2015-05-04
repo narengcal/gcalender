@@ -16,7 +16,7 @@ Source code can be found here:  https://github.com/narengcal/gcalender.git
 
   2) click on authorize button and login with the following account or your own gmail account
   		username:  narengcal@gmail.com
-        password:  mobiquitydemo
+        password:  ****** , check gmail attachment
 
   3) Select date from the date input tag. If there are any events on selected date it will show those events on third div section.
 
@@ -25,7 +25,7 @@ Source code can be found here:  https://github.com/narengcal/gcalender.git
 
   Note:  currently this application is not using Exact event time 
 
-  
+
 
 
 
