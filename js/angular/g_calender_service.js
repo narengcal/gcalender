@@ -2,12 +2,14 @@
 
 /**
  * @ngdoc function
- * @name rmcUiApp.controller:UserProfileService
- * @description # UserProfileService Controller of the rmcUiApp
+ * @name GoogleCalenderService
+ * @description # GoogleCalenderService Controller of the gcalender app
  */
 angular.module('g_calender').service(
 	'GoogleCalenderService',
 	function($http) {
+
+		//replace your client id here , if you want to make it work with another google apli client
 
 		var CLIENT_ID = '513796455815-3io38pvoicjkqra5tpqil9sdgs6t5p20.apps.googleusercontent.com';
 
@@ -31,7 +33,7 @@ angular.module('g_calender').service(
 				// Add 24hrs in seconds to get all events of a particular day.
 				var end_Date = new Date((start_date.getTime()+ 1*24*60*60*1000 ));
 
-				console.log("end date "+end_Date)
+				//console.log("end date "+end_Date)
 
 				var request = gapi.client.calendar.events.list({
 			        'calendarId': 'primary',
@@ -109,7 +111,7 @@ angular.module('g_calender').service(
 			});
 
 			request.execute(function(resp) {
-				console.log(resp);
+				//console.log(resp);
 				if(typeof resp.error == "undefined")
 					callback();
 			});
