@@ -9,7 +9,7 @@ angular.module('g_calender').service(
 	'GoogleCalenderService',
 	function($http) {
 
-		//replace your client id here , if you want to make it work with another google apli client
+		//replace your client id here , if you want to make it work with another google apli client and add your own
 
 		var CLIENT_ID = '513796455815-3io38pvoicjkqra5tpqil9sdgs6t5p20.apps.googleusercontent.com';
 
@@ -26,7 +26,7 @@ angular.module('g_calender').service(
 
 				var start_date = new Date( yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-"+(dd[1]?dd:"0"+dd[0])  );
 
-				console.log("start date "+ start_date)
+				//console.log("start date "+ start_date)
 
 				start_date.setDate(start_date.getDate())
 
@@ -92,7 +92,7 @@ angular.module('g_calender').service(
 			var mm = (date.getMonth()+1).toString(); // getMonth() is zero-based
 			var dd  = date.getDate().toString();
 			var start_date = yyyy + "-" + (mm[1]?mm:"0"+mm[0]) + "-"+(dd[1]?dd:"0"+dd[0]);
-			console.log("add Event start date " + start_date);
+			//console.log("add Event start date " + start_date);
 			var resource = {
 				"summary": event.summary,
 				"location": event.location,
